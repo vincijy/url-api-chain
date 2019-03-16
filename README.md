@@ -5,7 +5,9 @@ URL  API 链式调用, 基于es6。根据URL实现完全动态的调用。
 现在很多网站都搞REST API，调用API的URL类似：
 
 http://serverhost/user/userinfo/
+
 http://serverhost/user/fans/list/
+
 给每个URL对应的API都写一个方法是件很掏粪的事情.
 
 基于es6 中的proxy 可以实现如下链式调用:
