@@ -24,10 +24,8 @@ export default {
     name: 'App',
     data(){
         return{
-
-            getResult: 'sds',
+            getResult: '',
             postResult: ''
-
         }
     },
 
