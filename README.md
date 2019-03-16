@@ -8,8 +8,7 @@ npm install --save axios
 
 
 ## vue-demo 示例
-
-`
+```
 
 <script>
 
@@ -67,4 +66,4 @@ export default {
     }
 }
 </script>
-`
+```
