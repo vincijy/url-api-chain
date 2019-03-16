@@ -6,8 +6,11 @@ npm install --save axios
 
 
 #### 示例:GET
-
+```
 GET /user/info?id=5
+```
+对应JS请求:
+
 ```
 api.user.info.get(
     {
@@ -23,15 +26,17 @@ api.user.info.get(
 ```
 #### 示例:POST, 且路径含有参数
 
+```
 POST /user/5/login
-
 发送数据
 
 data = {
     'password': '123',
     'username': 'username'    
 }
+```
 
+对应JS请求:
 
 ```
 api.user.(5).login.post(
