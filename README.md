@@ -24,11 +24,14 @@ api.user.info.get(
 #### 示例:POST, 且路径含有参数
 
 POST /user/5/login
+
 发送数据
+
 data = {
     'password': '123',
     'username': 'username'    
 }
+
 
 ```
 api.user.(5).login.post(
