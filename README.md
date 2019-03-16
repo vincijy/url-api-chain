@@ -1,10 +1,13 @@
 # url-api-chain
 URL  API 链式调用, 基于es6。根据URL实现完全动态的调用。
 
-# 依赖
+# demo运行
+```
 npm install --save axios
+npm run dev
+```
 
-
+# 使用
 #### 示例:GET
 ```
 GET /user/info?id=5
