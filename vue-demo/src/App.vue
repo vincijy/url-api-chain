@@ -1,7 +1,9 @@
 <template>
     <div id="app">
         <button type="button" @click="getUserInfo()"> 获取用户信息</button>
+        {{ getResult }}
         <button type="button" @click="login()">登录</button>
+        {{ postResult }}
     </div>
 </template>
 
@@ -16,13 +18,15 @@ var config = {
 
 var api = new apiChain(config)
 
+var log = console.log.bind(console)
+
 export default {
     name: 'App',
     data(){
         return{
 
-            'getRes': '',
-            'postRes': ''
+            getResult: 'sds',
+            postResult: ''
 
         }
     },
@@ -30,12 +34,14 @@ export default {
     methods:{
         //npm install --save axios
         getUserInfo(){
+            var that = this
             api.user.info.get(
                 {
                     'id': 5
                 },
                 (res)=>{
                     log(res.data)
+                    this.getResult = res
                 },
                 (err)=>{
 
@@ -44,6 +50,7 @@ export default {
         },
 
         login(){
+            var that = this
             var user_id = 5
             api.user.pathArg(user_id).login.post(
                 {
@@ -52,6 +59,8 @@ export default {
                 },
                 (res)=>{
                     log(res)
+                    that.postResult = res
+                    log("***", that.postResult)
                 },
                 (err)=>{
                     log(err)
