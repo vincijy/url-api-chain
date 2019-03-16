@@ -8,9 +8,9 @@ npm install --save axios
 
 
 ## vue-demo 示例
-```
 
-<script>
+
+```
 
 import apiChain from './utils/util'
 
@@ -65,5 +65,5 @@ export default {
         }
     }
 }
-</script>
+
 ```
