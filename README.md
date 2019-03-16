@@ -1,14 +1,52 @@
 # url-api-chain
 URL  API 链式调用, 基于es6。根据URL实现完全动态的调用。
 
-# 介绍
-
 # 依赖
 npm install --save axios
 
 
-## vue-demo 示例
+####示例:GET
 
+GET /user/info?id=5
+
+api.user.info.get(
+    {
+        'id': 5
+    },
+    (res)=>{
+        log(res.data)
+    },
+    (err)=>{
+
+    }
+)
+
+####示例:POST, 且路径含有参数
+
+POST /user/5/login
+
+data = {
+    'password': '123',
+    'username': 'username'    
+}
+
+api.user.(5).login.post(
+    {
+        'password': '123',
+        'username': 'username'
+    },
+    (res)=>{
+        log(res)
+    },
+    (err)=>{
+        log(err)
+    }
+)
+
+
+
+
+## 在vue 中使用示例
 
 ```
 
@@ -23,17 +61,8 @@ var api = new apiChain(config)
 
 export default {
     name: 'App',
-    data(){
-        return{
-
-            'getRes': '',
-            'postRes': ''
-
-        }
-    },
 
     methods:{
-
         getUserInfo(){
             api.user.info.get(
                 {
@@ -50,7 +79,7 @@ export default {
 
         login(){
             var user_id = 5
-            api.user.pathArg(user_id).login.post(
+            api.user.(user_id).login.post(
                 {
                     'password': '123',
                     'username': 'username'
