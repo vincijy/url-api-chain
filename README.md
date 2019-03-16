@@ -46,7 +46,7 @@ data = {
 对应JS请求:
 
 ```
-api.user.(5).login.post(
+api.user.pathArg(5).login.post(
     {
         'password': '123',
         'username': 'username'
@@ -94,7 +94,7 @@ export default {
     },
 
     methods:{
-        
+
         getUserInfo(){
             var that = this
             api.user.info.get(
