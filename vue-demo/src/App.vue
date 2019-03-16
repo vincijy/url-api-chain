@@ -41,7 +41,7 @@ export default {
                 },
                 (res)=>{
                     log(res.data)
-                    this.getResult = res
+                    that.getResult = res
                 },
                 (err)=>{
 
