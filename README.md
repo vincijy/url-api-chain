@@ -5,7 +5,7 @@ URL  API 链式调用, 基于es6。根据URL实现完全动态的调用。
 npm install --save axios
 
 
-####示例:GET
+#### 示例:GET
 
 GET /user/info?id=5
 
@@ -21,7 +21,7 @@ api.user.info.get(
     }
 )
 
-####示例:POST, 且路径含有参数
+#### 示例:POST, 且路径含有参数
 
 POST /user/5/login
 
