@@ -1,15 +1,9 @@
-# url-api-chain
-URL  API 链式调用, 基于es6。根据URL实现完全动态的调用。
-
-# 介绍
-
-# 依赖
-npm install --save axios
-
-
-## vue-demo 示例
-
-`
+<template>
+    <div id="app">
+        <button type="button" @click="getUserInfo()"> 获取用户信息</button>
+        <button type="button" @click="login()">登录</button>
+    </div>
+</template>
 
 <script>
 
@@ -34,7 +28,7 @@ export default {
     },
 
     methods:{
-
+        //npm install --save axios
         getUserInfo(){
             api.user.info.get(
                 {
@@ -67,4 +61,7 @@ export default {
     }
 }
 </script>
-`
+
+<style>
+
+</style>
