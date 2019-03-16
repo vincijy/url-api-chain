@@ -100,7 +100,7 @@ export default {
 
         login(){
             var user_id = 5
-            api.user.(user_id).login.post(
+            api.user.pathArg(user_id).login.post(
                 {
                     'password': '123',
                     'username': 'username'
