@@ -32,7 +32,6 @@ export default {
     },
 
     methods:{
-        //npm install --save axios
         getUserInfo(){
             var that = this
             api.user.info.get(
